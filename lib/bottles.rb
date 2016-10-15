@@ -1,7 +1,10 @@
 class Bottles
-  VERSE = "99 bottles of beer on the wall, 99 bottles of beer.\nTake one down and pass it around, 98 bottles of beer on the wall.\n"
+  TEMPLATE = "%{number} bottles of beer on the wall, %{number} bottles of beer.\nTake one down and pass it around, %{lower_number} bottles of beer on the wall.\n"
 
   def verse(number)
-    VERSE
+    TEMPLATE % {
+      number: number,
+      lower_number: number - 1
+    }
   end
 end
