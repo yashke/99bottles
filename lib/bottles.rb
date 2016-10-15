@@ -68,6 +68,10 @@ class Bottles
     verses.map(&:to_s).join("\n")
   end
 
+  def song
+    verses(99, 0)
+  end
+
   private
   def verses_for_range(range)
     inversed_verses = range.map do |number|
